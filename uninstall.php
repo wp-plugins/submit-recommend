@@ -1,9 +1,9 @@
 <?php
 /*
-Last modified: 2012/09/19
+Last modified: 2012/10/10
 License: GPL2
-http://www.imamura.biz/blog/
+Author URI: http://www.e-agency.co.jp/
 */
-if (!defined('ABSPATH') && !defined('WP_UNINSTALL_PLUGIN')) {exit();}
+if ( !defined('ABSPATH') && !defined('WP_UNINSTALL_PLUGIN') ) { exit(); }
 delete_option('rcmd_opt');
 ?>

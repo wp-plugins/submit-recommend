@@ -1,27 +1,13 @@
 <?php
 	//初期値設定
 	$opt_val = array();
-/*
-	$opt_val = array(
-		"rcmd_id"		=> "",
-		"thumb"			=> "",
-		"recommend_tmp"		=> "wp-recommend",
-		"recommend_position"	=> 0,
-		"history_tmp"		=> "wp-history",
-		"history_position"	=> 0,
-		"ranking_span"		=> "week",
-		"ranking_type"		=> "pv",
-		"ranking_tmp"		=> "wp-ranking",
-		"ranking_position"	=> 0
-	);
-*/
 
-	// データベースから既存の設定値を読み込む
+	//Read Database
 	if( isset( $opt_val ) ){
 		$opt_val = get_option( 'rcmd_opt' );
 	} 
 
-	//初期値設定
+	//init_value
 	if($opt_val['recommend_tmp'] ==""){ $opt_val['recommend_tmp'] = "wp-recommend"; }
 	if($opt_val['recommend_position'] ==""){ $opt_val['recommend_position'] = 0; }
 	if($opt_val['history_tmp'] ==""){ $opt_val['history_tmp'] = "wp-history"; }
@@ -31,22 +17,12 @@
 	if($opt_val['ranking_tmp'] ==""){ $opt_val['ranking_tmp'] = "wp-ranking"; }
 	if($opt_val['ranking_position'] ==""){ $opt_val['ranking_position'] = 0; }
 
-/*
-	if( isset( $opt_val ) ){
-		$opt_val = get_option( 'rcmd_opt' );
-	} 
-*/
-
-//	$opt_val['rcmd_id'] = get_option( 'rcmd_id' );
-//	$opt_val['post_align'] = get_option( 'post_align' );
-
-
-        // 送信ボタンを押したときの処理
+        //Send to Submit Button
 	if ( isset( $_POST['rcmd_submit'] ) ) {
-		//レコメンドのオプションのフォームから値を投稿されているかチェック
+		//Check Adminn Referer
 		check_admin_referer("rcmd_options" , "rcmd_submit_wpnonce" ); 
 		
-		//投稿されたデータを取得&エスケープ)
+		//Set Value & Escape
 	        $opt_val['rcmd_id']		= stripslashes( $_POST['rcmd_id'] );
 	        $opt_val['thumb']		= stripslashes( clean_url( $_POST['thumb'] ) );
 		$opt_val['recommend_tmp']	= stripslashes( $_POST['recommend_tmp'] );
@@ -58,16 +34,14 @@
 		$opt_val['ranking_tmp']		= stripslashes( $_POST['ranking_tmp'] );
 	        $opt_val['ranking_position']	= intval( $_POST['ranking_position'] );
 
-		//データベース更新
-//       		update_option( 'rcmd_id', $opt_val['rcmd_id'] );
-//       		update_option( 'post_align', $opt_val['post_align'] );
+		//Update Database
        		update_option( 'rcmd_opt', $opt_val );
 
-//デバッグ用
+//Debug Only
 //		$opt_val = delete_option( 'rcmd_opt' );
 
 
-	// 画面に更新されたことを伝えるメッセージを表示
+	//Display Messages
 
 ?>
 	<div class="updated"><p><strong>保存されました。</strong></p></div>
