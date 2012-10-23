@@ -57,7 +57,7 @@
 		<tbody>
 			<tr valign="top">
 				<th scome="row">レコメンドID</th>
-				<td><input type="text" name="rcmd_id" value="<?php echo esc_attr( $opt_val['rcmd_id'] ); ?>" size="20"></td>
+				<td><input type="text" name="rcmd_id" value="<?php echo esc_attr( $opt_val['rcmd_id'] ); ?>" size="20"><br />「さぶみっと！レコメンド」利用時に発行されるIDを入力してください。<br />さぶみっと！レコメンドエンジンについてのお問い合わせは<a href="http://recommend.submit.ne.jp/wordpress/index.html" target="_blank">こちらからお願い致します。</a></td>
 			</tr>
 		</tbody>
 	</table>
@@ -165,7 +165,7 @@
 <hr />
 
 	<h3>ショートコードを使ってどこにでも表示</h3>
-	<p>投稿や固定ページ以外の場所（テーマファイルなど）にレコメンドを表示させることができます。</p>
+	<p>投稿や固定ページ以外の場所（ヘッダー・フッター・サイドバーウィジェット、テーマファイル内の任意の箇所）にレコメンドを表示させることができます。</p>
 	<table class="form-table">
 		<tbody>
 			<tr valign="top">
@@ -184,16 +184,15 @@
 
 	<h3>パラメーターの設定</h3>
 	<p>表示タイプを変更したい場合は、パラメータを設定してください。</p>
-	<p>※ショートコードはWordPressループ内での使用をお願いします。</p>
 	<table class="form-table">
 		<tbody>
 			<tr valign="top">
 				<th scome="row">code</th>
-				<td>コード</td>
+				<td>コード（投稿、固定ページID）</td>
 			</tr>
 			<tr valign="top">
 				<th scome="row">tmp</th>
-				<td>テンプレート名</td>
+				<td>テンプレート名（さぶみっと！レコメンド管理画面内のテンプレート設定で作成したテンプレートを指定ください）</td>
 			</tr>
 			<tr valign="top">
 				<th scome="row">span</th>
