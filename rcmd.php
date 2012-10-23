@@ -3,13 +3,13 @@
 Plugin Name: Recommend Engine
 Plugin URI: http://recommend.submit.ne.jp/
 Description: さぶみっと！レコメンド for WordPress Plugin
-Version: 1.0.1
+Version: 1.0.2
 Author: e-agency
 Text Domain: rcmd
 Author URI: http://www.e-agency.co.jp/
 License: GPL2
 
-Copyright 2012 e-agency (email : recommend_support@dragon.jp )
+Copyright 2012 e-agency (email : product@dragon.jp )
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as
