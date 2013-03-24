@@ -3,7 +3,7 @@
 Plugin Name: Recommend Engine
 Plugin URI: http://recommend.submit.ne.jp/
 Description: さぶみっと！レコメンド for WordPress Plugin
-Version: 1.0.2
+Version: 1.0.3
 Author: e-agency
 Text Domain: rcmd
 Author URI: http://www.e-agency.co.jp/
